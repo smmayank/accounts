@@ -5,6 +5,7 @@
   "main": "app/account.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-start": "nodemon --watch app",
     "start": "node app/account.js"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/smmayank/accounts#readme",
   "dependencies": {
     "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
