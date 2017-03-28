@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 
-app.use('/api', require('./routes/api.js'))
+app.use('/', require('./routes'))
 
 var port = process.env.ACCOUNT_PORT || 3000
 
