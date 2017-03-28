@@ -2,6 +2,9 @@ var express = require('express')
 var logger = require('morgan')
 var app = express()
 
+global.db = require('../models')
+global.utils = require('./utils')
+
 app.use(logger('tiny'))
 app.use('/', require('./routes'))
 
@@ -17,8 +20,6 @@ app.use(function(err, req, res, next) {
 })
 
 var port = process.env.ACCOUNT_PORT || 3000
-
-global.db = require('../models')
 
 app.listen(port, function() {
     console.log('Example app listening to port', port)
