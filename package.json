@@ -24,9 +24,12 @@
   "homepage": "https://github.com/smmayank/accounts#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0"
   },
   "devDependencies": {
+    "mysql": "^2.13.0",
     "nodemon": "^1.11.0"
   }
 }
