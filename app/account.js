@@ -3,6 +3,8 @@ var app = express()
 
 app.use('/api', require('./routes/api.js'))
 
-app.listen(3000, function() {
-    console.log('Example app listening to port 3000')
+var port = process.env.ACCOUNT_PORT || 3000
+
+app.listen(port, function() {
+    console.log('Example app listening to port', port)
 })
