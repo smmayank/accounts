@@ -1,10 +1,13 @@
 'use strict';
 
-var uuidV4 = require('uuid/v4')
-
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
-    uuid: DataTypes.STRING,
+    uuid: {
+      type: DataTypes.UUID,
+      unique: true,
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4()
+    },
     email: DataTypes.STRING,
     name: DataTypes.STRING
   }, {
@@ -14,9 +17,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  User.beforeCreate('addUuid', function addUuid(create, options){
-    create.uuid = uuidV4()
-    return create
-  })
   return User;
 };
