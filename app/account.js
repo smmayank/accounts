@@ -1,3 +1,5 @@
+global.env = process.env.NODE_ENV || 'dev';
+
 var express = require('express')
 var logger = require('morgan')
 var app = express()
