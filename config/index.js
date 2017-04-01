@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 var basename = path.basename(module.filename);
-var utils = {};
+var config = {};
 
 fs
   .readdirSync(__dirname)
@@ -11,9 +11,9 @@ fs
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(function(file) {
-    var util = require('./' + file);
-    var utilName = file.slice(0, -3)
-    utils[utilName] = util
+    var aquired = require('./' + file);
+    var name = file.slice(0, -3);
+    config[name] = aquired;
   });
 
-module.exports = utils;
+module.exports = config;
