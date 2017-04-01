@@ -2,11 +2,11 @@
   "name": "accounts",
   "version": "1.0.0",
   "description": "Auth server",
-  "main": "app/account.js",
+  "main": "account.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-start": "nodemon --watch app",
-    "start": "node app/account.js"
+    "dev-start": "nodemon --watch .",
+    "start": "node account.js"
   },
   "repository": {
     "type": "git",

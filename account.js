@@ -4,7 +4,7 @@ var express = require('express')
 var logger = require('morgan')
 var app = express()
 
-global.db = require('../models')
+global.db = require('./models')
 global.utils = require('./utils')
 
 app.use(logger('tiny'))
